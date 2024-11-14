@@ -16,3 +16,6 @@
 [submodule "js/objects/TOP-Calculator"]
 	path = js/objects/TOP-Calculator
 	url = https://github.com/JMestre32/TOP-Calculator
+[submodule "odin-landing-page"]
+	path = odin-landing-page
+	url = https://github.com/JMestre32/odin-landing-page

@@ -1,3 +1,6 @@
 [submodule "flexbox"]
 	path = flexbox
 	url = https://github.com/JMestre32/flexbox
+[submodule "js/etch-a-sketch"]
+	path = js/etch-a-sketch
+	url = https://github.com/JMestre32/etch-a-sketch

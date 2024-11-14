@@ -7,3 +7,6 @@
 [submodule "js/javascript-exercises"]
 	path = js/javascript-exercises
 	url = https://github.com/JMestre32/javascript-exercises
+[submodule "js/odin-errors"]
+	path = js/odin-errors
+	url = https://github.com/JMestre32/odin-errors

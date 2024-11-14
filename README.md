@@ -1,0 +1,1 @@
+Hello, this is a repository that documents my progress throughout most of The Odin Project. 

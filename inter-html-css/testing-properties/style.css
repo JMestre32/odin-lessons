@@ -1,0 +1,12 @@
+:root{
+    --main-bgcd ..: red; 
+}
+  
+  .cool-paragraph {
+    background-color: var(--main-bg);
+  }
+  
+  .boring-paragraph {
+    background-color: var(--main-bg);
+  }
+  

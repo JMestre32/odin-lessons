@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/mywebsite" method="post">
+        <p>
+            <label for="name">
+                <span>Text: </span>
+                <input type="text" id="name" name="username" placeholder="Which font do I use?">
+            </label>
+        </p>
+        <p>
+            <label for="dob">
+                <span>Date: </span>
+                <input type="text" id="dob" name="dateofbirth" placeholder="mm/dd/yyyy">
+            </label>
+        </p>
+        <p>
+            <label for="select">
+                <span>Select: </span>
+                <select name="selectoption" id="select">
+                    <option value="peta">peta</option>
+                    <option value="brian">brain</option>
+                    <option value="lebron">lebron</option>
+                </select>
+            </label>
+        </p>
+        <p>
+            <label for="comment">
+                <span>Comments: </span>
+                <textarea name="user_comments" id="comment"></textarea>
+            </label>
+        </p>
+        
+        <fieldset>
+            <legend>What is your favorite meal?</legend>
+            <label for="fav_food">
+                <input type="radio" name="user_food" id="fav_food">
+                Soup
+            </label>
+            <label for="fav_food1">
+                <input type="radio" name="user_food" id="fav_food1">
+                Curry
+            </label>
+            <label for="fav_food2">
+                <input type="radio" name="user_food" id="fav_food2">
+                Pizza
+            </label>
+            <label for="fav_food3">
+                <input type="radio" name="user_food" id="fav_food3">
+                Eggs
+            </label>
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

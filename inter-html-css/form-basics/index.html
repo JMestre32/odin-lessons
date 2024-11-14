@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="example.com/path" method="post">
+        This is a textbox (no label)
+        <input type="text">
+        This is a textbox (no label)
+    </form>
+
+    <br>
+
+    <form action="example.com/path" method="post">
+        <label for="first_name">This uses the label element (label is for people who need assistance):</label>
+        <input type="text" id="first_name">
+    </form>
+
+    <br>
+
+    <form action="example.com/path" method="post">
+        <label for="first_name">This uses the label AND placeholder:</label>
+        <input type="text" id="first_name" placeholder="This is a placeholder, it uses placeholder">
+    </form>
+
+    <br>
+
+    <form action="example.com/path" method="post">
+        <label for="first_name">This uses the label AND placeholder AND name to let the backend know what this input is for:</label>
+        <input type="text" id="first_name" name = "first_name" placeholder="This is a placeholder, it uses placeholder"> 
+    </form>
+
+      Without the name attribute, the backend won't store the data 
+
+    <br>
+    <br>
+      
+    <form action="example.com/path" method="post">
+      <label for="user_email">Email Address:</label>This form uses type email to ensure a valid email was used
+      <input type="email" id="user_email" name="email" placeholder="you@example.com">
+    </form>
+
+    <br>
+
+    <form action="example.com/path" method="post">
+      <label for="user_password">Password:</label> This uses type 'password' in order to mask the text
+      <input type="password" id="user_password" name="password">
+    </form>
+
+    <form action="example.com/path" method="post">
+        <label for="amount">Amount</label> This uses the type 'number' and ignores any other characters
+        <input type="number" name="amount" id="amount">
+    </form>
+    <br>
+
+    <form action="example.com/path" method="post">
+        <label for="dob">Date of Birth:</label> This uses the type 'date' to render a datepicker
+        <input type="date" name="dob" id="dob">
+    </form>
+    <br>
+    <textarea name="" id="" cols="20" rows="20">This is a textarea, it allows for comments and whatnot. The special thing about em is they 
+        have cols and rows attribute that predetermine the size of the textarea</textarea>
+    <br>
+    <select name="family_guy" id="">
+        <option value="peter">Peter</option>
+        <option value="lois">Lois</option>
+        <option value="brian">Brian</option>
+        <option value="stewie" selected>Stewie</option>
+        <option value="chris">Chris</option>
+        <option value="meg">Meg</option>
+    </select>
+    
+    <br>
+
+    This one uses optgroup to label the types of things you are selecting
+    <br>
+    <select name="fashion">
+        <optgroup label="Clothing">
+          <option value="t_shirt">T-Shirts</option>
+          <option value="sweater">Sweaters</option>
+          <option value="coats">Coats</option>
+        </optgroup>
+        <optgroup label="Foot Wear">
+          <option value="sneakers">Sneakers</option>
+          <option value="boots">Boots</option>
+          <option value="sandals">Sandals</option>
+        </optgroup>
+      </select>
+      
+      <br>
+
+    This one uses the type attribute and uses 'radio' it is used for more extensive lists (5 or more options)
+    <br>
+    <h1>Ticket Type</h1>
+    <div>
+        <input type="radio" id="child" name="ticket_type" value="child" checked>
+        <label for="child">Child</label>
+    </div>
+
+    <div>
+        <input type="radio" id="adult" name="ticket_type" value="adult">
+        <label for="adult">Adult</label>
+    </div>
+
+    <div>
+        <input type="radio" id="senior" name="ticket_type" value="senior">
+        <label for="senior">Senior</label>
+    </div>
+
+    <br>
+
+    This one uses checkboxes, for when the user can select multiple options
+    <h1>Pizza Toppings</h1>
+
+    <div>
+        <input type="checkbox" id="sausage" name="topping" value="sausage">
+        <label for="sausage">Sausage</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="onions" name="topping" value="onions">
+        <label for="onions">Onions</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+        <label for="pepperoni">Pepperoni</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+        <label for="mushrooms">Mushrooms</label>
+    </div>
+
+    <br>
+    you can also have a single checkbox for when u want a T/F type answer (i.e. "I want to opt in to receiving messages typa thing")
+    <br>
+    <div>
+        <input type="checkbox" id="newsletter" name="news_letter">
+        <label for="newsletter">Send me the news letter</label>
+    </div>
+      
+    <h1>BUTTONS</h1>
+    There are 3 types of buttons: submit, reset, and generic
+
+    <br>
+    <strong>Submits</strong> the form it is contained within
+    <br>
+    <button type="submit">Submit</button>
+    <br>
+
+    <strong>Resets</strong> the form to its initial state
+    <br>
+    <button type="reset">Reset</button>
+
+    <br>
+    The generic button can be used for anything, typically it is used with JS for creating interactive UI's
+    <br>
+    <button type="button">Click to toggle</button>
+
+    <br>
+    <br>
+    To avoid users from feeling overwhelmed with large forms, we use the fieldset element to help distinguish all the questions from one another
+    <br>
+    <fieldset>
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name" name="first_name">
+        
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" name="last_name">
+    </fieldset>
+
+    <br>
+    <br>
+    To make it even more digestible for users, we use the legend attribute to label each of the inputs, it should always come right after an opening fieldset tage
+    <fieldset>
+        <legend>Contact Details</legend>
+      
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+      
+        <label for="phone_number">Phone Number:</label>
+        <input type="tel" id="phone_number" name="phone_number">
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+      </fieldset>
+      
+      <fieldset>
+        <legend>Delivery Details</legend>
+      
+        <label for="street_address">Street Address:</label>
+        <input type="text" id="street_address" name="street_address">
+      
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city">
+      
+        <label for="zip_code">Zip Code:</label>
+        <input type="text" id="zip_code" name="zip_code">
+    </fieldset>
+
+    A common usecase for legends is to indicate what their answer is doing (see below)
+
+    <fieldset>
+        <legend>What would you like to drink?</legend>
+      
+        <div>
+          <input type="radio" name="drink" id="coffee" value="coffee">
+          <label for="coffee">Coffee</label>
+        </div>
+      
+        <div>
+          <input type="radio" name="drink" id="tea" value="tea">
+          <label for="tea">Tea</label>
+        </div>
+      
+        <div>
+          <input type="radio" name="drink" id="soda" value="soda">
+          <label for="soda">Soda</label>
+        </div>
+      </fieldset>
+      
+      
+</body>
+</html>

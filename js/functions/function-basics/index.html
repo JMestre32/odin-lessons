@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+</head>
+<body>
+  <script>
+    function add7(num1){
+        return num1 + 7
+    }
+
+    function multiply(num1, num2){
+        return num1 * num2
+    }
+    
+    function capitalize(str){
+        return str[0].toUpperCase() + str.slice(1) //slice counts from the given number in the string until end
+    }
+
+    function lastLetter(str){
+        return str.slice(-1) //similarly, this starts from the end of the string and returns the last character
+    }
+
+    console.log(add7(7));
+    console.log(multiply(3, 5))
+    console.log(capitalize("gello"))
+    console.log(capitalize("UpperCasE"))
+    console.log(lastLetter("abcd"))
+  </script>
+</body>
+</html>

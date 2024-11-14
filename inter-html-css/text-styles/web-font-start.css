@@ -1,0 +1,61 @@
+/* General setup */
+@font-face {
+    font-family: 'caviar_dreamsbold';
+    src: url('fonts/caviar_dreams_bold-webfont.woff2') format('woff2'),
+         url('fonts/caviar_dreams_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'chunkfiveregular';
+    src: url('fonts/chunkfive-regular-webfont.woff2') format('woff2'),
+         url('fonts/chunkfive-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'amatic_scregular';
+    src: url('fonts/amaticsc-regular-webfont.woff2') format('woff2'),
+         url('fonts/amaticsc-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html {
+    font-size: 10px;
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  body {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Typography */
+  
+  h1 {
+    font-size: 3.2rem;
+    font-family: "caviar_dreamsbold";
+  }
+  
+  h2 {
+    font-size: 2.4rem;
+    font-family: "caviar_dreamsbold";
+  }
+  
+  p {
+    font-size: 2.6rem;
+    line-height: 1.6;
+    word-spacing: 0.6rem;
+    font-family: "amatic_scregular"
+  }

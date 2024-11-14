@@ -4,3 +4,6 @@
 [submodule "js/etch-a-sketch"]
 	path = js/etch-a-sketch
 	url = https://github.com/JMestre32/etch-a-sketch
+[submodule "js/javascript-exercises"]
+	path = js/javascript-exercises
+	url = https://github.com/JMestre32/javascript-exercises

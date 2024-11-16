@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     
-
+    <h1>This uses <u>minlength</u>, if you don't use at least 3 characters you get a prompt.</h1>
     <form action="#" method="get">
         <div>
         <textarea placeholder="What's happening?" minlength="3"></textarea>
@@ -16,6 +17,88 @@
         <button type="submit">Tweet</button>
     </form>
     
+
+    <h1>Similarly, this uses <u>maxlength</u>. If you try to type more than 20 characters, the browser won't let you.</h1>
     
+
+    <form action="#" method="get">
+    <div>
+        <textarea placeholder="What's happening?" maxlength="20"></textarea>
+    </div>
+
+    <button type="submit">Tweet</button>
+    </form>
+
+    
+    <h1>You can combine <u>minlength</u> and <u>maxlength</u>. (Try typing less than 5 or more than 20 characters)</h1>
+    <form action="#" method="get">
+        <div>
+        <textarea placeholder="What's happening?" minlength="5" maxlength="20"></textarea>
+        </div>
+        <button type="submit">Tweet</button>
+    </form>
+  
+  <h1>For minimum number validation (i.e. ordering at least one of something) you use <u>min</u>.</h1>
+
+    <form action="#" method="get">
+        <div>
+        <label for="quantity">Quantity</label>
+        </div>
+        <input type="number" id="quantity" name="quantity" min="1" value="0">
+        
+        <div>
+        <button type="submit">Place Order</button>
+        </div>
+    </form>
+
+    <h1>For max number validation (i.e. limiting the amount someone can purchase) you use <u>max</u></h1>
+
+
+    <form action="#" method="get">
+        <div>
+        <label for="passengers">Passengers</label>
+        </div>
+        <input type="number" id="passengers" name="passengers" max="5" value="0">
+        
+        <div>
+        <button type="submit">Book</button>
+        </div>
+    </form>
+  
+  <h1>We can use the <u>pattern</u> attribute for things like credit card number validation, or in this case, zipcode validation.</h1>
+
+
+    <form action="#" method="get">
+        <div>
+        <label for="zip_code">Postal / Zip Code:</label>
+        </div>
+    
+        <input type="text" id="zip_code" name="zip_code" pattern="(\d{5}([\-]\d{4})?)"  placeholder="12345" required>
+    
+        <div>
+        <button type="submit">Submit</button>
+        </div>
+    </form>
+    
+    <h1>You may also style validations by targeting valid and invalid in your stylesheet.</h1>
+    <form action="#" method="get">
+        <div>
+          <label for="email">Email</label>
+        </div>
+        <input type="email" id="email" name="email">
+      
+        <div>
+          <label for="website">Website</label>
+        </div>
+        <input type="url" id="website" name="website">
+      
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+      
+    
+  
+
 </body>
 </html>

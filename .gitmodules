@@ -19,3 +19,6 @@
 [submodule "odin-landing-page"]
 	path = odin-landing-page
 	url = https://github.com/JMestre32/odin-landing-page
+[submodule "inter-html-css/odin-sign-up-form"]
+	path = inter-html-css/odin-sign-up-form
+	url = https://github.com/JMestre32/odin-sign-up-form

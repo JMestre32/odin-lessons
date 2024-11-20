@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Use inspect element -> Layout -> 'Display Line Numbers'  to view grid line numbers</h1>
+    <div class="container">
+        <div class="item first-row">A</div>
+        <div class="item first-row">B</div>
+        <div class="item first-row last-column">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item last-column">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item last-column">I</div>
+      </div>
+      
+
+    <h1>This is an example of how we can use grid-column-start/grid-row-start and grid-column-end/grid-row-end to make larger cells.</h1>
+    <div class="second-container">
+        <div class="first-room" id="first-living-room">Living Room</div>
+        <div class="first-room" id="first-kitchen">Kitchen</div>
+        <div class="first-room" id="first-bedroom">Bedroom</div>
+        <div class="first-room" id="first-bathroom">Bathroom</div>
+        <div class="first-room" id="first-closet">Closet</div>
+    </div>
+
+    <h1>Knowing this, we can now use the space more efficiently and have the rest of the rooms span multiple grid cells.</h1>
+
+    <div class="third-container">
+        <div class="second-room" id="second-living-room">Living Room</div>
+        <div class="second-room" id="second-kitchen">Kitchen</div>
+        <div class="second-room" id="second-bedroom">Bedroom</div>
+        <div class="second-room" id="second-bathroom">Bathroom</div>
+        <div class="second-room" id="second-closet">Closet</div>
+      </div>
+</body>
+</html>

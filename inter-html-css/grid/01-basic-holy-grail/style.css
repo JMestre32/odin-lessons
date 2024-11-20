@@ -77,3 +77,23 @@ html {
     grid-area: 8 / 1 / 9 / 9
 }
 
+/* ACTUAL SOLN */
+
+/* .container {
+    display: grid;
+    grid-template-columns: 300px 900px;
+    grid-template-rows: 100px 100px 500px 100px;
+    gap: 15px;
+  }
+  
+  .header {
+    grid-column: 1 / 3;
+  }
+  
+  .sidebar {
+    grid-row: 2 / 4;
+  }
+  
+  .footer {
+    grid-column: 1 / 3;
+  } */

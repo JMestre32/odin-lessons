@@ -62,28 +62,79 @@
     grid-row-end: 3;
   }
   
+  /* Take note of the short-hand used here. */
   #second-kitchen {
-    grid-column: 4 / 6;
-    grid-row: 3 / 6;
+    grid-column: 1 / 4;
+    grid-row: 3 / 5;
   }
   
   #second-bedroom {
-    grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-start: 4;
+    grid-column-end: 6;
     grid-row-start: 3;
     grid-row-end: 5;
   }
   
   #second-bathroom {
     grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 6;
-  }
-  
-  #second-closet {
-    grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 5;
     grid-row-end: 6;
   }
+  
+  #second-closet {
+
+    /* GRID-AREA: grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+
+    grid-area: 5 / 4 / 6 / 6;
+
+    /* Equivalent to this:  */
+    /* grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 6; */
+  }
+
+/* Fourth example: Using the alternate grid-area method. */
+  /* There is an alternate way to use grid-area which is to meticulously map out the cells one by one by name. */
+  /* One cool feature about this is you can declare empty cells using the '.' character. */
+  
+
+  .fourth-container {
+    display: inline-grid;
+    grid-template: 40px 40px 40px 40px 40px / 40px 40px 40px 40px 40px;
+    background-color: lightblue; 
+    grid-template-areas:
+      "living-room living-room living-room living-room living-room"
+      "living-room living-room living-room living-room living-room"
+      "bedroom bedroom bathroom kitchen kitchen"
+      "bedroom bedroom bathroom kitchen kitchen"
+      "closet closet . . ."    
+  }
+  
+  .room {
+    border: 1px solid;
+    font-size: 50%;
+    text-align: center;
+  }
+  
+  #living-room {
+     grid-area:  living-room;
+  }
+  
+  #kitchen {
+    grid-area: kitchen;
+  }
+  
+  #bedroom {
+    grid-area: bedroom;
+  }
+  
+  #bathroom {
+    grid-area: bathroom;
+  }
+  
+  #closet {
+    grid-area: closet;
+  }
+  

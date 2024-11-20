@@ -1,0 +1,70 @@
+.grid-container {
+    resize:both;
+    overflow: auto;
+    display: grid;
+    gap: 4px;
+    padding: 4px;
+    border: 1px solid grey;
+    background-color: skyblue;
+    /* Take note of how TEDIOUS this is */
+    grid-template-rows: 150px 150px;
+    grid-template-columns: 150px 150px 150px 150px 150px;
+
+    /* We can use the CSS function repeat() to avoid this! */
+
+    grid-template-rows: repeat(2, 150px);
+    grid-template-columns: repeat(5, 150px);
+
+    /* To make grid items dynamic, we use the 'fr' unit */
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+
+    /* We can also distribute the space disproportionately */
+    grid-template-columns: repeat(2, 2fr) repeat(3, 1fr);
+
+    /* We can also utilize the min and max size of our tracks using css functions min and max */
+    /* In this example our cells will be a height of 200px or 50% of the container's size depending on which unit is smaller */
+    /* Conversely, the cells width will be 120px or if 15% of the container's width is larger it'll adjust accordingly.  */
+    grid-template-rows: repeat(2, min(200px, 50%));
+    grid-template-columns: repeat(5, max(120px, 15%));
+
+    /* We can also use a CSS function specifically used with Grid called minmax() */
+    /* In this case, it makes sense to use static for the arguments */
+    /* The cells will shrink and grow between 150px-200px and stop at those sizes*/
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(5, minmax(150px, 200px));
+      
+
+    /* Recall the css function clamp(min-size, ideal-size, max-size) */
+    /* In this example the width will render equal to 20% of the container's width */
+    /* unless, the number is lower than 150px or larger than 500px, then it will use those numbers as its width */
+
+    grid-template-columns: repeat(5, clamp(150px, 20%, 200px));
+
+    /* auto-fit will return the highest positive integer without overflowing the grid.
+    In this example we'll assume the width of the container is 500px. What this means is that the minmax function is used to calculate the highest number of items
+    that will fit in this width (500px). Thus, it will render 3 columns. Once that calculation is made, it resizes columns up to the maximum value allowed by minmax (1fr).
+    So, all three columns will be given an equal allotment of space available. As we resize, these calculations happen in realtime. */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+
+    /* In most cases, auto-fill will act the same, except when there are fewer items than can fill up the entirety of the grid row.
+    In this case, when the grid is expanded to a size where another grid item could fit, but there aren't any left, auto-fit will keep them at their max size.
+    auto-fill grid items will snap down to their min size once space becomes available to add another grid item, even if there isn't one to be rendered. */
+}
+  
+  .grid-item {
+    background-color: #444;
+    text-align: center;
+    color: #ddd;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    padding: 12px;
+  }
+  
+  p {
+    margin: 12px auto 24px;
+  }
+  
+  img {
+    height: 60px;
+  }

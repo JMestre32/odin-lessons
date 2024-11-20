@@ -46,3 +46,34 @@ html {
   color: white;
   text-align: left;
 }
+
+/* My additions: */
+
+
+.container{
+    display: grid;
+    grid-template-rows: 110px 110px 110px 110px 110px 110px 110px 110px;
+    grid-template-columns: 110px 110px 110px 110px 110px 110px 110px 110px;
+    gap: 15px;
+}
+
+.header{
+    grid-area: 1 / 1 / 2 / 9 ;
+}
+
+.sidebar {
+    grid-area: 2 / 1 / 8 / 3;
+}
+
+.nav{ 
+    grid-area: 2 / 3 / 3 / 9;
+}
+
+.article{
+    grid-area: 3 / 3 / 8 / 9;
+}
+
+.footer{
+    grid-area: 8 / 1 / 9 / 9
+}
+

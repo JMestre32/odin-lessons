@@ -1,0 +1,35 @@
+.container{
+    display: grid;
+    grid-template-columns:50px 50px;
+    grid-template-rows: 50px 50px;
+    
+    /* This property ensures that when new, unaccounted for, grid items are added,
+    any new tracks the implicit grid makes for extra content are set at predefined values.  */
+    grid-auto-rows: 50px
+
+    
+
+    /* Shorthand version: grid-template: 50px 50px / 50px 50px; */
+    /* Rows are defined before the slash, columns are after. */
+
+    /* Grids don't have to have the same px value either
+    grid-template 50px 50px/ 250px 50px 50px  is valid too.*/
+
+
+}
+
+
+.gap_container{
+    display: grid;
+    grid-template-columns: 50px 50px;
+    grid-template-rows: 50px 50px;
+    column-gap: 10px;
+    row-gap: 100px;
+
+    /* Shorthand version:
+    gap: 100px 10px; */
+}
+
+.gap_container > div{
+    border: 1px solid blue;
+}

@@ -89,3 +89,49 @@
     font-size: 13px;
     font-weight: normal;
   }
+
+  /* my addition */
+
+  .container{
+    display: grid;
+    grid-template-columns: 1fr, 5fr;
+    grid-template-rows: 1fr, 4fr, 1;
+  }
+
+  ul{
+    list-style: none;
+  }
+
+  .header{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .logo{
+    display: grid;
+    justify-content: start;
+    align-self: center;
+  }
+  
+  
+  .menu ul{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .menu{
+    display: grid;
+    align-items: center;
+  }
+
+
+  .sidebar{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+

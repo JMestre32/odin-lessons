@@ -22,3 +22,6 @@
 [submodule "inter-html-css/odin-sign-up-form"]
 	path = inter-html-css/odin-sign-up-form
 	url = https://github.com/JMestre32/odin-sign-up-form
+[submodule "inter-html-css/grid/odin-admin-dashboard"]
+	path = inter-html-css/grid/odin-admin-dashboard
+	url = https://github.com/JMestre32/odin-admin-dashboard

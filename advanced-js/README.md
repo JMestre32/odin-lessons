@@ -1,0 +1,1 @@
+These are all my notes and assigments following the Javascript path of The Odin Project.

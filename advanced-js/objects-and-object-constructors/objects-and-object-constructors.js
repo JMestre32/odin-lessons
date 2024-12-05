@@ -69,8 +69,8 @@ function Player(name, marker){
     };
 }
 
-const player = new Player('steve', 'X');
-const player2 = new Player('also steve', 'O')
+// const player = new Player('steve', 'X');
+// const player2 = new Player('also steve', 'O')
 
 //Exerise make a book constructor with a function info() that displays the book information
 
@@ -111,3 +111,43 @@ const theHobbit = new Book('The Hobbit', 'J.R. Tolkien', 180, false);
 Player.prototype.sayHello = function(){
     console.log("Hello, I'm a player!");
 }
+
+// So why would we ever want to define properties and functions on the prototype?
+
+// 1. It saves memory. Defining them on a centralized, shared object which the objects have access to saves a lot of memory.
+// 2. Prototypal Inheritance (i.e. prototypes allow objects like player1 and player2 to access functions like .sayHello)
+
+
+// Prototypal Inheritance Usecase:
+function Person(name) {
+    this.name = name;
+  }
+  
+  Person.prototype.sayName = function() {
+    console.log(`Hello, I'm ${this.name}!`);
+  };
+  
+  function Player(name, marker) {
+    this.name = name;
+    this.marker = marker;
+  }
+  
+  Player.prototype.getMarker = function() {
+    console.log(`My marker is '${this.marker}'`);
+  };
+  
+  Object.getPrototypeOf(Player.prototype); // returns Object.prototype
+  
+  // Now make `Player` objects inherit from `Person`
+  Object.setPrototypeOf(Player.prototype, Person.prototype);
+  Object.getPrototypeOf(Player.prototype); // returns Person.prototype
+  
+  const player1 = new Player('steve', 'X');
+  const player2 = new Player('also steve', 'O');
+  
+  player1.sayName(); // Hello, I'm steve!
+  player2.sayName(); // Hello, I'm also steve!
+  
+  player1.getMarker(); // My marker is 'X'
+  player2.getMarker(); // My marker is 'O'
+  

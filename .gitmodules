@@ -25,3 +25,6 @@
 [submodule "inter-html-css/grid/odin-admin-dashboard"]
 	path = inter-html-css/grid/odin-admin-dashboard
 	url = https://github.com/JMestre32/odin-admin-dashboard
+[submodule "advanced-js/TOP-Library"]
+	path = advanced-js/TOP-Library
+	url = https://github.com/JMestre32/TOP-Library

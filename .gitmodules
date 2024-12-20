@@ -28,3 +28,6 @@
 [submodule "advanced-js/TOP-Library"]
 	path = advanced-js/TOP-Library
 	url = https://github.com/JMestre32/TOP-Library
+[submodule "TOP-tictactoe"]
+	path = TOP-tictactoe
+	url = https://github.com/JMestre32/TOP-tictactoe

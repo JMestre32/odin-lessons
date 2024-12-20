@@ -31,3 +31,6 @@
 [submodule "TOP-tictactoe"]
 	path = TOP-tictactoe
 	url = https://github.com/JMestre32/TOP-tictactoe
+[submodule "advanced-js/TOP-tictactoe"]
+	path = advanced-js/TOP-tictactoe
+	url = https://github.com/JMestre32/TOP-tictactoe

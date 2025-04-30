@@ -86,10 +86,74 @@ class Person {
 
 
 
-/*
 
-    - Use inheritance with classes.
-    - Explain how to implement private class fields and methods.
-    - Explain what static properties and methods are.
+  //Inheritance with classes
 
-*/
+  class Animal {
+    constructor(name) {
+      this.name = name;
+    }
+  
+    speak() {
+      console.log(`${this.name} makes a noise.`);
+    }
+  }
+  
+  class Dog extends Animal {
+    constructor(name, breed) {
+      super(name); // calls Animal's constructor
+      this.breed = breed;
+    }
+  
+    speak() {
+      console.log(`${this.name} barks. It's a ${this.breed}.`);
+    }
+  }
+  
+  const d = new Dog("Rex", "Labrador");
+  d.speak(); // Rex barks. It's a Labrador.
+
+  
+  //Private class fields and methods
+  //Use # to declare private fields or methods. They can only be accessed inside the class.
+  class BankAccount {
+    #balance = 0; // private field
+  
+    constructor(owner) {
+      this.owner = owner;
+    }
+  
+    deposit(amount) {
+      if (amount > 0) this.#balance += amount;
+    }
+  
+    #formatBalance() { // private method
+      return `$${this.#balance.toFixed(2)}`;
+    }
+  
+    showBalance() {
+      console.log(`${this.owner}'s balance is ${this.#formatBalance()}`);
+    }
+  }
+  
+  const acct = new BankAccount("Barry");
+  acct.deposit(100);
+  acct.showBalance(); // Barry's balance is $100.00
+  // acct.#balance => SyntaxError: Private field '#balance' must be declared in an enclosing class
+  
+
+  //Static properties and methods
+  class MathHelper {
+    static PI = 3.14159; // static property
+  
+    static square(x) {   // static method
+      return x * x;
+    }
+  }
+  
+  console.log(MathHelper.PI);        // 3.14159
+  console.log(MathHelper.square(5)); // 25
+  
+  const m = new MathHelper();
+  // m.square(5) =>  Error: square is not a function on instance
+  

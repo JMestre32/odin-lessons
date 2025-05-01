@@ -142,7 +142,7 @@ class Person {
   // acct.#balance => SyntaxError: Private field '#balance' must be declared in an enclosing class
   
 
-  //Static properties and methods
+  //Static properties and methods must be called by the classes themselves.
   class MathHelper {
     static PI = 3.14159; // static property
   
